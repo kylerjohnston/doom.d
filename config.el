@@ -56,3 +56,4 @@
 (add-hook 'salt-mode-hook
           (lambda()
             (flyspell-mode 1)))
+(add-to-list 'exec-path "/home/krj/.elixir-ls")
