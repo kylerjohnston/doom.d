@@ -61,12 +61,14 @@
           (lambda()
             (flyspell-mode 1)))
 (after! lsp-clients
-  (lsp-register-client (make-lsp-client :new-connection (lsp-stdio-connection
-                                                         (expand-file-name "~/.elixir-ls/language_server.sh"))
-                                        :major-modes '(elixir-mode)
-                                        :priority -1
-                                        :server-id 'elixir-ls
-                                        :initialized-fn (lambda (workspace)
-                                                          (with-lsp-workspace workspace
-                                                                              (let ((config `(:elixirLS (:mixEnv "dev" :dialyzerEnabled :json-false))))
-                                                                                (lsp--set-configuration config)))))))
+  (lsp-register-client
+   (make-lsp-client :new-connection
+                    (lsp-stdio-connection
+                     (expand-file-name "~/.elixir-ls/language_server.sh"))
+                    :major-modes '(elixir-mode)
+                    :priority -1
+                    :server-id 'elixir-ls
+                    :initialized-fn (lambda (workspace)
+                                      (with-lsp-workspace workspace
+                                                          (let ((config `(:elixirLS (:mixEnv "dev" :dialyzerEnabled :json-false))))
+                                                            (lsp--set-configuration config)))))))
