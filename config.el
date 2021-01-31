@@ -33,9 +33,9 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/roam")
-(setq org-roam-directory "~/roam")
-(setq deft-directory "~/roam"
+(setq org-directory "~/org")
+(setq org-roam-directory "~/org")
+(setq deft-directory "~/org"
       deft-extensions '("org")
       deft-recursive t)
 
