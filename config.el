@@ -28,12 +28,16 @@
 (setq doom-theme 'doom-one)
 (setq
  doom-font (font-spec :family "Source Code Pro" :size 15)
- doom-variable-pitch-font (font-spec :family "Source Sans Pro" :size 16))
+ doom-variable-pitch-font (font-spec :family "Source Sans 3" :size 16))
 (setq +zen-text-scale 1)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/org/")
+(setq org-directory "~/roam")
+(setq org-roam-directory "~/roam")
+(setq deft-directory "~/roam"
+      deft-extensions '("org")
+      deft-recursive t)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
