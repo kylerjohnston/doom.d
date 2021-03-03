@@ -64,6 +64,7 @@
 (add-hook 'salt-mode-hook
           (lambda()
             (flyspell-mode 1)))
+
 (after! lsp-clients
   (lsp-register-client
    (make-lsp-client :new-connection
