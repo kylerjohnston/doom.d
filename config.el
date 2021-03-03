@@ -60,10 +60,6 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
-;; salt
-(add-hook 'salt-mode-hook
-          (lambda()
-            (flyspell-mode 1)))
 
 (after! lsp-clients
   (lsp-register-client
