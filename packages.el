@@ -51,3 +51,6 @@
 (package! prettier-js)
 
 (package! chatgpt-shell :recipe (:host github :repo "xenodium/chatgpt-shell"))
+
+(package! copilot
+  :recipe (:host github :repo "zerolfx/copilot.el" :files ("*.el" "dist")))
